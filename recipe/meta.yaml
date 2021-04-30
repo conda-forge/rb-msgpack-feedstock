@@ -10,7 +10,7 @@ source:
   sha256: 30aa967022cf6e937bd6ac6d09080b283ea249a5c4e2352a50ae92b5e7326ad3
 
 build:
-  number: 0
+  number: 1
   script:
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
@@ -43,6 +43,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - mxr-conda
     - oblute
     - rluria14
     - sodre
