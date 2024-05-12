@@ -1,5 +1,5 @@
 {% set name = "msgpack" %}
-{% set version = "1.4.2" %}
+{% set version = "1.4.4" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-  sha256: 86e5de5bd6dc1cf8bfb41dbada562a7370c20983018eec89bd3b830ebd942a1a
+  sha256: 699cbdf438d40b8f773552d8745bcdb864645c1c108e72988531a177a4e0282d
 
 build:
   number: 0
@@ -16,7 +16,7 @@ build:
     - gem unpack {{ name }}-{{ version }}.gem
     - make -C {{ PREFIX }}/lib/ruby/gems/{{ ruby }}.0/gems/{{ name }}-{{ version }}/ext/{{ name }} clean
   skip: {{ win }}
-  skip: True  # [ruby == "2.5" and osx]
+  skip: true  # [ruby == "2.5" and osx]
 
 requirements:
   build:
